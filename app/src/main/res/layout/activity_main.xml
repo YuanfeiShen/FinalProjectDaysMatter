@@ -6,4 +6,95 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="\nPlease enter the starting date:"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spin1"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:entries="@array/years"></Spinner>
+
+            <Spinner
+                android:id="@+id/spin2"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:entries="@array/months"></Spinner>
+
+            <Spinner
+                android:id="@+id/spin3"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:entries="@array/dates"></Spinner>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="\nPlease enter the ending date:"
+            android:textSize="18sp"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spin4"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:entries="@array/years"></Spinner>
+
+            <Spinner
+                android:id="@+id/spin5"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:entries="@array/months"></Spinner>
+
+            <Spinner
+                android:id="@+id/spin6"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:entries="@array/dates"></Spinner>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\nCalculate!\n"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="\nResult:\n"
+            android:textSize="18sp" />
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
