@@ -6,10 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
+        android:gravity="center"
         android:orientation="vertical">
 
         <TextView
@@ -17,8 +18,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="\nPlease enter the starting date:"
-            android:textSize="18sp" />
+            android:text="Please enter the starting/memorial date: \n(YYYY/MM/DD)"
+            android:textSize="18sp"
+            app:fontFamily="casual" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -29,19 +31,27 @@
                 android:id="@+id/spin1"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
-                android:entries="@array/years"></Spinner>
+                android:entries="@array/years"
+                app:fontFamily="casual">
+            </Spinner>
 
             <Spinner
                 android:id="@+id/spin2"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
-                android:entries="@array/months"></Spinner>
+                android:entries="@array/months"
+                app:fontFamily="casual">
+
+            </Spinner>
 
             <Spinner
                 android:id="@+id/spin3"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:entries="@array/dates"></Spinner>
+                android:entries="@array/dates"
+                app:fontFamily="casual">
+
+            </Spinner>
 
 
         </LinearLayout>
@@ -49,12 +59,13 @@
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="\nPlease enter the ending date:"
+            android:text="Please enter the ending date: \n(YYYY/MM/DD)"
             android:textSize="18sp"
-            android:visibility="visible" />
+            android:visibility="visible"
+            app:fontFamily="casual" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -65,36 +76,140 @@
                 android:id="@+id/spin4"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
-                android:entries="@array/years"></Spinner>
+                android:entries="@array/years"
+                app:fontFamily="casual"></Spinner>
 
             <Spinner
                 android:id="@+id/spin5"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
-                android:entries="@array/months"></Spinner>
+                android:entries="@array/months"
+                app:fontFamily="casual"></Spinner>
 
             <Spinner
                 android:id="@+id/spin6"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:entries="@array/dates"></Spinner>
+                android:entries="@array/dates"
+                app:fontFamily="casual"></Spinner>
 
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/button"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="\nCalculate!\n"
-            android:textSize="18sp" />
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="confirm"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="  " />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Clear" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Set Memorial" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="\nResult:\n"
-            android:textSize="18sp" />
+            android:text="\nDays in between:"
+            android:textSize="18sp"
+            app:fontFamily="casual" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:visibility="visible"
+                app:fontFamily="casual" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Memorial Day:\n"
+            android:textSize="18sp"
+            app:fontFamily="casual" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:backgroundTint="#ffffff"
+                android:cursorVisible="true"
+                android:ems="10"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textCursorDrawable="@null" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="20sp" />
+        </LinearLayout>
+
     </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>
