@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         final Spinner endDaySpinner = findViewById(R.id.spin6);
         final TextView endTextView = findViewById(R.id.textView5);
         final TextView importantText = findViewById(R.id.textView9);
+        final TextView daysText = findViewById(R.id.textView11);
 
         Button button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
@@ -49,9 +50,9 @@ public class MainActivity extends AppCompatActivity {
                 //String secsOut = Integer.toString(secs);
 
 
-                endTextView.setText(/* yearOut + " years\n" + monthOut + " months\n" +*/ dayOut + " days\n" /*
+                endTextView.setText(/* yearOut + " years\n" + monthOut + " months\n" +*/ dayOut /*
                  + hoursOut + " hours\n" + minsOut + " minutes\n" + secsOut + " seconds\n"*/ );
-
+                daysText.setText(" Days\n");
                 if (isLeap(StartYear)) {
                     if (StartMonth == 2 && StartDate > 29) {
                         endTextView.setText("Invalid input.\nPlease check your input and try again.");
@@ -93,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
                 endMonthSpinner.setSelection(0);
                 endDaySpinner.setSelection(0);
                 endTextView.setText("");
+                daysText.setText("");
             }
         });
 
