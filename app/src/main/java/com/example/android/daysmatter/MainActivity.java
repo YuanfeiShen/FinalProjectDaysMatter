@@ -55,33 +55,38 @@ public class MainActivity extends AppCompatActivity {
                 daysText.setText(" Days\n");
                 if (isLeap(StartYear)) {
                     if (StartMonth == 2 && StartDate > 29) {
-                        endTextView.setText("Invalid input.\nPlease check your input and try again.");
+                        daysText.setText("Invalid input.\nPlease check your input and try again.");
+                        endTextView.setText("");
                     }
                 } else {
                     if (StartMonth == 2 && StartDate > 28) {
-                        endTextView.setText("Invalid input.\nPlease check your input and try again.");
+                        daysText.setText("Invalid input.\nPlease check your input and try again.");
+                        endTextView.setText("");
                     }
                 }
                 if (isLeap(EndYear)) {
                     if (EndMonth == 2 && EndDate > 29) {
-                        endTextView.setText("Invalid input.\nPlease check your input and try again.");
+                        daysText.setText("Invalid input.\nPlease check your input and try again.");
+                        endTextView.setText("");
                     }
                 } else {
                     if (EndMonth == 2 && EndDate > 28) {
-                        endTextView.setText("Invalid input.\nPlease check your input and try again.");
+                        daysText.setText("Invalid input.\nPlease check your input and try again.");
+                        endTextView.setText("");
                     }
                 }
                 if (StartMonth == 4 || StartMonth == 6 || StartMonth == 9 || StartMonth == 11) {
                     if (StartDate == 31) {
-                        endTextView.setText("Invalid input.\nPlease check your input and try again.");
+                        daysText.setText("Invalid input.\nPlease check your input and try again.");
+                        endTextView.setText("");
                     }
                 }
                 if (EndMonth == 4 || EndMonth == 6 || EndMonth == 9 || EndMonth == 11) {
                     if (EndDate == 31) {
-                        endTextView.setText("Invalid input.\nPlease check your input and try again.");
+                        daysText.setText("Invalid input.\nPlease check your input and try again.");
+                        endTextView.setText("");
                     }
                 }
-                daysText.setText("");
             }
         });
 

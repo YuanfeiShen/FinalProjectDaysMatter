@@ -170,7 +170,7 @@
                 android:layout_height="100dp"
                 android:layout_weight="1"
                 android:gravity="right"
-                android:textSize="20sp"
+                android:textSize="50sp"
                 android:visibility="visible" />
 
             <TextView
