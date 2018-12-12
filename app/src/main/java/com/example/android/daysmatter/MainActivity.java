@@ -81,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
                         endTextView.setText("Invalid input.\nPlease check your input and try again.");
                     }
                 }
+                daysText.setText("");
             }
         });
 
